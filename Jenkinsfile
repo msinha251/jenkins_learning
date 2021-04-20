@@ -3,7 +3,8 @@ pipeline {
   stages {
     stage("build") {
       steps {
-        echo "building application.."
+        echo "building application"
+        ehco 'test commit'
       }
     }
     
