@@ -4,7 +4,7 @@ pipeline {
     stage("build") {
       steps {
         echo "building application"
-        ehco 'test commit'
+        echo 'test commit'
       }
     }
     
