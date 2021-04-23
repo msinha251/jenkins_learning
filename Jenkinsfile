@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage("build") {
       steps {
-        DOCKER_HOME = tool "docker"
+        def DOCKER_HOME = tool "docker"
         echo DOCKER_HOME
         sh """
           docker build -t jenkins_test .
