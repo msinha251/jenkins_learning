@@ -1,5 +1,11 @@
 pipeline {
-  agent any
+  //agent any
+    agent {
+      docker {
+          image 'ubuntu'
+          args '-u root:sudo -v $HOME/workspace/myproject:/myproject'
+      }
+    }
   stages {
     stage("build") {
       //def DOCKER_HOME = tool "docker"
