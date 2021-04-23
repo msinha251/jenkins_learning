@@ -2,8 +2,9 @@ pipeline {
   agent any
   stages {
     stage("build") {
+      def DOCKER_HOME = tool "docker"
       steps {
-        def DOCKER_HOME = tool "docker"
+        
         echo DOCKER_HOME
         sh """
           docker build -t jenkins_test .
