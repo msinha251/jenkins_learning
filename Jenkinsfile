@@ -2,7 +2,7 @@ pipeline {
   agent any
   stages {
     stage("build") {
-      def DOCKER_HOME = tool "docker"
+      //def DOCKER_HOME = tool "docker"
       steps {
         
         echo DOCKER_HOME
